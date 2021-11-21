@@ -1,4 +1,4 @@
-const populationData;
+let populationData;
 
 fetch("https://datausa.io/api/data?drilldowns=State&measures=Population")
   .catch((e) =>
@@ -23,10 +23,10 @@ fetch("https://datausa.io/api/data?drilldowns=State&measures=Population")
     getData();
   })
   .catch((e) => {
-    if (e instanceof NetworkError) {
+    if (e instanceof NetworkInformation) {
       console.log("Błąd sieci. Sprawdz połączenie.");
     } else if (e instanceof TypeError) {
-      console.log("Z serwerem dzieje się coś niedobrego!");
+      console.log("Z serwerem dzieje się coś niedobrego!", {e});
     } else {
       console.error(e);
     }
@@ -151,24 +151,28 @@ function dataObject(State, Year, Population) {
   this.Population = Population;
 }
 
+// FIXME: fix CSS class.
 function addElement(x) {
-  let  = document.createElement("div");
-  mainDIV.classList.add("mainDIV");
-  mainDIV.classList.add("bg-blur");
+  let statTableSection = document.createElement("section");
+  statTableSection.classList.add("data-table");
+  statTableSection.classList.add("bg-blur");
 
-  let nationDIV = document.createElement("div");
-  nationDIV.className = "nationInfo";
-  nationDIV.innerHTML = x.State;
-  mainDIV.appendChild(nationDIV);
+  let nationElement = document.createElement("header");
+  nationElement.className = "state";
+  nationElement.innerHTML = x.State;
+  statTableSection.appendChild(nationElement);
 
-  let yearDIV = document.createElement("div");
-  yearDIV.className = "yearInfo";
-  yearDIV.innerHTML = x.Year;
-  mainDIV.appendChild(yearDIV);
+  let yearElement = document.createElement("main");
+  yearElement.className = "year";
+  yearElement.innerHTML = x.Year;
+  statTableSection.appendChild(yearElement);
 
-  let populationDIV = document.createElement("div");
-  populationDIV.className = "populationInfo";
-  populationDIV.innerHTML = "Population: " + x.Population;
-  mainDIV.appendChild(populationDIV);
-  document.getElementById("tabela").appendChild(mainDIV);
+  let populationElement = document.createElement("footer");
+  populationElement.className = "population";
+  populationElement.innerHTML = "Population: " + x.Population;
+  statTableSection.appendChild(populationElement);
+
+  document
+    .getElementsByClassName("population-statistics")[0]
+    .appendChild(statTableSection);
 }
