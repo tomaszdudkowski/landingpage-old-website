@@ -151,28 +151,27 @@ function dataObject(State, Year, Population) {
   this.Population = Population;
 }
 
-// FIXME: fix CSS class.
 function addElement(x) {
-  let statTableSection = document.createElement("section");
-  statTableSection.classList.add("data-table");
-  statTableSection.classList.add("bg-blur");
+  let statElement = document.createElement("section");
+  statElement.classList.add("content-box");
+  statElement.classList.add("bg-blur");
 
   let nationElement = document.createElement("header");
   nationElement.className = "state";
   nationElement.innerHTML = x.State;
-  statTableSection.appendChild(nationElement);
+  statElement.appendChild(nationElement);
 
   let yearElement = document.createElement("main");
   yearElement.className = "year";
   yearElement.innerHTML = x.Year;
-  statTableSection.appendChild(yearElement);
+  statElement.appendChild(yearElement);
 
   let populationElement = document.createElement("footer");
   populationElement.className = "population";
   populationElement.innerHTML = "Population: " + x.Population;
-  statTableSection.appendChild(populationElement);
+  statElement.appendChild(populationElement);
 
   document
     .getElementsByClassName("population-statistics")[0]
-    .appendChild(statTableSection);
+    .appendChild(statElement);
 }

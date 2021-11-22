@@ -79,7 +79,7 @@ body {
   flex-direction: column;
 }
 
-main {
+.home-content {
   display: flex;
 }
 
