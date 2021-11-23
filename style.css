@@ -43,6 +43,11 @@ body {
   font-size: 16px;
 }
 
+.x-small-text-block {
+  font-size: 14px;
+  width: 240px;
+}
+
 .small-text-block {
   font-size: 17px;
   margin-left: 150px;
@@ -249,4 +254,18 @@ body {
 
 .btn-glow:hover {
   box-shadow: rgba(var(--primary-color), 0.5) 0px 0px 20px 0px;
+}
+
+.footer {
+  display: flex;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-control.shadow-0:focus {
+  box-shadow: none;
 }
