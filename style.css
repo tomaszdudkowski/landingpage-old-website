@@ -78,6 +78,8 @@ body {
   text-shadow: 0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%);
 }
 
+
+/* make it with Bootstrap */
 .right-side-image {
   width: 600px;
   display: flex;
@@ -87,8 +89,6 @@ body {
 .home-content {
   display: flex;
 }
-
-
 
 /* buttons styles */
 .btn {
