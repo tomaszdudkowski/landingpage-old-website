@@ -72,18 +72,18 @@
   transition: transform .2s;
 }
 
-.content-box:hover > .state {
+.content-box:hover .state {
   font-size: 23px;
   text-shadow: dimgray;
 }
 
-.content-box:hover > .year {
+.content-box:hover .year {
   font-size: 23px;
   color: deeppink;
   text-shadow: dimgray;
 }
 
-.content-box:hover > .population {
+.content-box:hover .population {
   font-size: 23px;
   text-shadow: dimgray;
 }
