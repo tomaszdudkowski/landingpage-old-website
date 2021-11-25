@@ -45,7 +45,7 @@ body {
 
 .x-small-text-block {
   font-size: 14px;
-  width: 240px;
+  width: auto;
 }
 
 .small-text-block {

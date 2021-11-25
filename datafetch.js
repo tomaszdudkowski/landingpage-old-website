@@ -81,10 +81,10 @@ let _populationState = 0;
 let _stateState = 0;
 
 function sortByYear() {
-  removeElementsByClass("nationInfo");
-  removeElementsByClass("yearInfo");
-  removeElementsByClass("populationInfo");
-  removeElementsByClass("mainDIV");
+  removeElementsByClass("state");
+  removeElementsByClass("year");
+  removeElementsByClass("population");
+  removeElementsByClass("content-box");
 
   if (_yearState == 0) {
     statTable.sort((a, b) => a.Year - b.Year);
@@ -100,10 +100,10 @@ function sortByYear() {
 }
 
 function sortByPopulation() {
-  removeElementsByClass("nationInfo");
-  removeElementsByClass("yearInfo");
-  removeElementsByClass("populationInfo");
-  removeElementsByClass("mainDIV");
+  removeElementsByClass("state");
+  removeElementsByClass("year");
+  removeElementsByClass("population");
+  removeElementsByClass("content-box");
 
   if (_populationState == 0) {
     statTable.sort((a, b) => a.Population - b.Population);
@@ -119,10 +119,10 @@ function sortByPopulation() {
 }
 
 function sortByState() {
-  removeElementsByClass("nationInfo");
-  removeElementsByClass("yearInfo");
-  removeElementsByClass("populationInfo");
-  removeElementsByClass("mainDIV");
+  removeElementsByClass("state");
+  removeElementsByClass("year");
+  removeElementsByClass("population");
+  removeElementsByClass("content-box");
 
   if (_stateState == 0) {
     statTable.sort(function (a, b) {
@@ -152,10 +152,10 @@ function sortByState() {
 }
 
 function defaultSetting() {
-  removeElementsByClass("nationInfo");
-  removeElementsByClass("yearInfo");
-  removeElementsByClass("populationInfo");
-  removeElementsByClass("mainDIV");
+  removeElementsByClass("state");
+  removeElementsByClass("year");
+  removeElementsByClass("population");
+  removeElementsByClass("content-box");
 
   statTable.sort(function (a, b) {
     if (a.State < b.State) {
