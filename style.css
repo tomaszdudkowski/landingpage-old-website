@@ -14,6 +14,11 @@ body {
   color: white;
 }
 
+::selection {
+  color: white;
+  background-color: #FFBD33;
+}
+
 .logo {
   font-size: 25px;
   font-weight: 800;
