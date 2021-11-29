@@ -16,7 +16,7 @@ body {
 
 ::selection {
   color: white;
-  background-color: #FFBD33;
+  background-color: #ffbd33;
 }
 
 .logo {
@@ -87,13 +87,53 @@ body {
 /* text decoration */
 
 .text-gradient {
-  background: linear-gradient(to right, #30cfd0, #c60fdf);
+  /* background: linear-gradient(to right, #30cfd0, #c60fdf);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  animation-name: pulse;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .text-glow {
   text-shadow: 0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%);
+}
+
+@keyframes pulse {
+  0% {
+    /* background: linear-gradient(to right, #30cfd0, #c60fdf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: darkturquoise;
+  }
+
+  25% {
+    /* background: linear-gradient( #08d4d4, #c76ad3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: hotpink;
+  }
+
+  50% {
+    /* background: linear-gradient(to left, #036666, #48224d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+  }
+
+  75% {
+    /* background: linear-gradient(to left, #036666, #48224d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: purple;
+  }
+  
+  100% {
+    /* background: linear-gradient( #12d3d3, #c542d6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: lightseagreen;
+  }
 }
 
 /* make it with Bootstrap */
