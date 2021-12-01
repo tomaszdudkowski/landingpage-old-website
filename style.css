@@ -277,6 +277,16 @@ body {
   text-align: justify;
 }
 
+.slider .carousel-item h5 {
+  color: #fff;
+  font-size: 100px;
+}
+
+.slider .carousel-item img {
+  height: 100vh;
+  width: 100vw;
+}
+
 .form-control::placeholder {
   font-size: 0.95rem;
   color: #aaa;
