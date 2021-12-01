@@ -280,6 +280,8 @@ body {
 .slider .carousel-item h5 {
   color: #fff;
   font-size: 100px;
+  text-shadow: 0px 0px 10px rgba(0 0 0 / 98%);
+  margin-bottom: 50%;
 }
 
 .slider .carousel-item img {
