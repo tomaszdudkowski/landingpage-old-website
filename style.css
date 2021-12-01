@@ -211,8 +211,6 @@ body {
 }
 
 .services {
-  display: flex;
-  flex-direction: row;
   height: 100vh;
   margin-top: 70px;
 }
@@ -220,6 +218,16 @@ body {
 .section-title {
   text-align: center;
   margin-top: 100px;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.icon-section {
+  display: flex;
+  justify-content: center;
 }
 
 .service {
