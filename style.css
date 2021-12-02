@@ -16,7 +16,7 @@ body {
 
 ::selection {
   color: white;
-  background-color: #ffbd33;
+  background-color: #7033ffc9;
 }
 
 .logo {
@@ -51,6 +51,7 @@ body {
   content: "";
   background-image: var(--bg-image);
   background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   height: 100%;
   z-index: -1;
