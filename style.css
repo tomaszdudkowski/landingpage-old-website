@@ -11,7 +11,7 @@
   overflow: hidden;
   position: fixed;
   width: 100%;
-  background-color: rgba(56, 57, 66, 0.24);
+  background-color: rgba(56, 57, 66, 0.7);
   z-index: 1;
   height: 6rem;
   padding-bottom: 20px;
@@ -25,6 +25,12 @@
 .navbar a {
   display: block;
   text-decoration: none;
+}
+
+.navbar-link {
+  padding-right: 20px;
+  padding-top: 30px;
+  color: #fff;
 }
 
 .hero {
@@ -131,6 +137,7 @@
 }
 
 .section-title {
+  padding-top: 40px;
   text-align: center;
 }
 
