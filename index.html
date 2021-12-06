@@ -30,19 +30,42 @@
       href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="microbase-css/microbase.elements.css">
+    <link rel="stylesheet" href="microbase-css/microbase.elements.css" />
     <title>Home Page - Tomasz Dudkowski</title>
   </head>
 
   <body>
+
+    <script>
+      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          document.getElementById("navbar").style.height = "5.3rem";
+          let navbar_btn = document.getElementById("navbar-btn");
+          navbar_btn.classList.remove("btn-s");
+          navbar_btn.classList.add("btn-xs");
+        } else {
+          document.getElementById("navbar").style.height = "6rem";
+          let navbar_btn = document.getElementById("navbar-btn");
+          navbar_btn.classList.remove("btn-xs");
+          navbar_btn.classList.add("btn-s");
+        }
+      }
+    </script>
+
     <header>
       <nav>
-        <ul class="navbar">
+        <ul id="navbar" class="navbar">
           <li><a href="index.html" class="logo">LOGO</a></li>
           <li>
-            <a
-              class="btn btn-medium btn-glow"
-              href="population_statistics.html"
+            <a id="navbar-btn" class="btn btn-s btn-round btn-glow" href="population_statistics.html"
               >USA population statistics</a
             >
           </li>
@@ -186,19 +209,28 @@
       <div id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="slider carousel-inner">
           <div class="carousel-item active">
-            <img src="winter_nature_background_blue_sky_snow_covered_trees_hd_winter.jpg" alt="...">
+            <img
+              src="winter_nature_background_blue_sky_snow_covered_trees_hd_winter.jpg"
+              alt="..."
+            />
             <div class="carousel-caption d-none d-md-block">
               <h5>Slide 1</h5>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="winter_scenery_snow_covered_trees_sunlight_reflection_hd_winter.jpg" alt="...">
+            <img
+              src="winter_scenery_snow_covered_trees_sunlight_reflection_hd_winter.jpg"
+              alt="..."
+            />
             <div class="carousel-caption d-none d-md-block">
               <h5>Slide 2</h5>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="winter_snow_covered_trees_path_under_blue_sky_during_sunny_day_hd_winter.jpg" alt="...">
+            <img
+              src="winter_snow_covered_trees_path_under_blue_sky_during_sunny_day_hd_winter.jpg"
+              alt="..."
+            />
             <div class="carousel-caption d-none d-md-block">
               <h5>Slide 3</h5>
             </div>
