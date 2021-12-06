@@ -37,23 +37,23 @@
   <body>
 
     <script>
-      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
       window.onscroll = function () {
         scrollFunction();
       };
 
       function scrollFunction() {
+        let navbar = document.getElementById("navbar");
+        let navbar_btn = document.getElementById("navbar-btn");
+
         if (
           document.body.scrollTop > 80 ||
           document.documentElement.scrollTop > 80
         ) {
-          document.getElementById("navbar").style.height = "5.3rem";
-          let navbar_btn = document.getElementById("navbar-btn");
+          navbar.style.height = "5.3rem";
           navbar_btn.classList.remove("btn-s");
           navbar_btn.classList.add("btn-xs");
         } else {
-          document.getElementById("navbar").style.height = "6rem";
-          let navbar_btn = document.getElementById("navbar-btn");
+          navbar.style.height = "6rem";
           navbar_btn.classList.remove("btn-xs");
           navbar_btn.classList.add("btn-s");
         }
