@@ -113,7 +113,11 @@ body {
 }
 
 main {
-  padding: 4rem 0;
+  flex: auto;
+}
+
+main .container {
+  padding: 5rem 0;
   flex: auto;
 }
 
