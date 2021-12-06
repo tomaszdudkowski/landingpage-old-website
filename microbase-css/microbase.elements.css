@@ -42,6 +42,11 @@
     font-size: 1.25rem;
   }
 
+  ::selection {
+    color: var(--color-light);
+    background-color: var(--color-primary-light);
+  }
+
   /* button */
   
   /* base of button */

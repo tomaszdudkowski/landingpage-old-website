@@ -103,10 +103,9 @@
 /* global styles */
 body {
   min-height: 100vh;
-  padding: 2rem 0;
   display: flex;
   flex-direction: column;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Montserrat", Calibri, 'Trebuchet MS', sans-serif;
   background: var(--color-dark);
   color: var(--color-light);
   line-height: 1.55;
@@ -114,6 +113,11 @@ body {
 }
 
 main {
+  flex: auto;
+}
+
+main .container {
+  padding: 5rem 0;
   flex: auto;
 }
 
