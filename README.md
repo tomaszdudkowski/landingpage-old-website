@@ -1,4 +1,4 @@
-# SUNDAY Website Project
+# Landing Page Project
  
  <ul>
   <li>HTML5</li>
