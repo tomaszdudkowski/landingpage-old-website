@@ -22,7 +22,7 @@ function scrollFunction() {
       navbar.style.color = "#FFF";
       navbar_btn.classList.add("btn");
       navbar_btn.classList.add("btn-s");
-      navbar.btn.classList.add("btn-round");
+      navbar_btn.classList.add("btn-round");
       navbar_btn.classList.add("btn-glow");
     }
   }
