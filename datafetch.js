@@ -63,7 +63,7 @@ let statTable = new Array();
 function getDataToArray() {
   let _temporaryObject = populationData;
   for (x of _temporaryObject) {
-    statTable.push(new dataObject(x.State, x.Year, x.Population));
+    statTable.push(new StatisticsData(x.State, x.Year, x.Population));
     console.log(x);
     addElement(x);
   }
@@ -173,10 +173,12 @@ function defaultSetting() {
   }
 }
 
-function dataObject(State, Year, Population) {
-  this.State = State;
-  this.Year = Year;
-  this.Population = Population;
+class StatisticsData {
+  constructor(state, year, population) {
+    this.State = state;
+    this.Year = year;
+    this.Population = population;
+  }
 }
 
 function addElement(x) {
