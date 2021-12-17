@@ -79,7 +79,7 @@
 
 .year {
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 400;
 }
 
@@ -101,7 +101,7 @@
 }
 
 .content-box:hover .year {
-  font-size: 23px;
+  font-size: 28px;
   color: deeppink;
   text-shadow: dimgray;
 }
