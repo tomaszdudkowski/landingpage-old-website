@@ -9,6 +9,27 @@
   --text-color: 256, 256, 256;
 }
 
+/* sort menu */
+
+.statistics-menu {
+  margin-top: 5rem;
+}
+
+.statistics-menu ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.statistics-menu p {
+  margin-top: 1.4rem;
+}
+
+.statistics-menu li + li {
+  margin-top: 0rem;
+}
+
 /* data table styles */
 .data-table {
   display: flex;
@@ -58,7 +79,7 @@
 
 .year {
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 400;
 }
 
@@ -80,7 +101,7 @@
 }
 
 .content-box:hover .year {
-  font-size: 23px;
+  font-size: 28px;
   color: deeppink;
   text-shadow: dimgray;
 }
@@ -88,19 +109,4 @@
 .content-box:hover .population {
   font-size: 23px;
   text-shadow: dimgray;
-}
-
-.statistics-menu ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: center;
-  flex: 1;
-}
-
-.statistics-menu li {
-  justify-content: center;
-}
-
-.statistics-menu p {
-  margin-top: 1.4rem;
 }
