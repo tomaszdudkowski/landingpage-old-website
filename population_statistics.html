@@ -24,18 +24,29 @@
       href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@200;500&family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="data.css">
+    
+    <link rel="stylesheet" href="microbase-css/microbase.elements.css" />
+    <link rel="stylesheet" href="data.css" />
+    <script src="main.js"></script>
     <title>Population Statistics USA - Tomasz Dudkowski</title>
   </head>
 
   <body>
+
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+    </script>
+
     <header>
       <nav>
-        <ul class="menu">
+        <ul id="navbar" class="navbar">
           <li><a href="index.html" class="logo">LOGO</a></li>
           <li>
-            <a class="btn btn-medium btn-semi-transparent btn-glow" href="population_statistics.html"
+            <a id="navbar-btn" class="btn btn-s btn-round btn-glow" href="population_statistics.html"
               >USA population statistics</a
             >
           </li>
@@ -43,19 +54,19 @@
       </nav>
     </header>
  
-<section class="statistics-menu bg-black">
+<section class="statistics-menu">
       <ul>
-        <p class="text x-small-text-block text-muted">Sort option:</p>
-        <li><a class="btn btn-small btn-semi-transparent" onclick="sortByYear()">Sort by year</a></li>
-        <li><a class="btn btn-small btn-semi-transparent" onclick="sortByState()">Sort by state</a></li>
-        <li><a class="btn btn-small btn-semi-transparent" onclick="sortByPopulation()">Sort by population</a></li>
+        <p class="small-text text-muted">Sort option:</p>
+        <li><a class="btn btn-s btn-dark btn-semi-round" onclick="sortByYear()">Sort by year</a></li>
+        <li><a class="btn btn-s btn-dark btn-semi-round" onclick="sortByState()">Sort by state</a></li>
+        <li><a class="btn btn-s btn-dark btn-semi-round" onclick="sortByPopulation()">Sort by population</a></li>
       </ul>
     </section>
 
     <section class="population-statistics data-table"></section>
 
-    <footer>
-      <div class="container bg-white p-3" style="--bs-bg-opacity: .1;">
+    <footer class="bg-white" style="--bs-bg-opacity: 0.1">
+      <div class="container p-3">
         <div class="row">
           <section class="col-lg-3 col-md-6">
             <p class="text x-small-text-block text-muted">
