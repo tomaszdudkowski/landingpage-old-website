@@ -1,70 +1,39 @@
 let populationData;
 
+const baseURL =
+  "https://datausa.io/api/data?drilldowns=State&measures=Population";
+
 async function getJSON() {
-  let response = await fetch(
-    "https://datausa.io/api/data?drilldowns=State&measures=Population"
-  );
+  try {
+    let response = await fetch(baseURL);
 
-  if(!response.ok) {
-    return null;
+    if (!response.ok) {
+      return null;
+    }
+
+    let body = await response.json();
+    return body.data;
+  } catch (error) {
+    console.log(error);
   }
-
-  let type = response.headers.get("content-type");
-  if(type !== "application/json; charset=utf-8") {
-    throw new TypeError("oczekiwany format JSON. Błędny typ.");
-  }
-
-  let body = await response.json();
-  return body.data;
 }
 
-
 async function displayData(x) {
-  populationData = await getJSON();
-  getDataToArray(populationData);
+  try {
+    populationData = await getJSON();
+    getDataToArray(populationData);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 displayData();
-//getDataToArray();
-
-// fetch("https://datausa.io/api/data?drilldowns=State&measures=Population")
-//   .catch((e) =>
-//     wait(500).then(
-//       fetch("https://datausa.io/api/data?drilldowns=State&measures=Population")
-//     )
-//   )
-//   .then((response) => {
-//     if (!response.ok) {
-//       return null;
-//     }
-
-//     let type = response.headers.get("content-type");
-//     if (type !== "application/json; charset=utf-8") {
-//       throw new TypeError("Oczekiwany format JSON. Błędny typ.");
-//     }
-
-//     return response.json();
-//   })
-//   .then((_jsonData) => {
-//     populationData = _jsonData;
-//     getData();
-//   })
-//   .catch((e) => {
-//     if (e instanceof NetworkInformation) {
-//       console.log("Błąd sieci. Sprawdz połączenie.");
-//     } else if (e instanceof TypeError) {
-//       console.log("Z serwerem dzieje się coś niedobrego!", { e });
-//     } else {
-//       console.error(e);
-//     }
-//   });
 
 let statTable = new Array();
 function getDataToArray() {
   let _temporaryObject = populationData;
   for (x of _temporaryObject) {
     statTable.push(new StatisticsData(x.State, x.Year, x.Population));
-    console.log(x);
     addElement(x);
   }
 }

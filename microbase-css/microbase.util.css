@@ -137,10 +137,6 @@ ul {
   padding: 0 0 0 1.3rem;
 }
 
-li + li {
-  margin-top: 1rem;
-}
-
 code {
   padding: 0.125em 0.25em;
   background: var(--color-off-white);

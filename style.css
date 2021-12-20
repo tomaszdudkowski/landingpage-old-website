@@ -1,36 +1,13 @@
 /* navigation */
 
+.navbar-nav .nav-link {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 .logo {
   font-size: 25px;
   font-weight: 800;
-}
-
-.navbar {
-  display: flex;
-  list-style-type: none;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  background-color: rgba(56, 57, 66, 0);
-  z-index: 1;
-  height: 6rem;
-  padding-bottom: 20px;
-  top: -30px;
-}
-
-.navbar li:first-child {
-  margin-right: auto;
-}
-
-.navbar a {
-  display: block;
-  text-decoration: none;
-}
-
-.navbar-link {
-  padding-right: 20px;
-  padding-top: 30px;
-  color: #fff;
 }
 
 .hero {
