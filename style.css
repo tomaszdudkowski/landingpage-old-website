@@ -5,32 +5,6 @@
   font-weight: 800;
 }
 
-#navbarh {
-  display: flex;
-  list-style-type: none;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  background-color: rgba(56, 57, 66, 0);
-  z-index: 1;
-  padding-bottom: 20px;
-}
-
-.navbarh li:first-child {
-  margin-right: auto;
-}
-
-.navbarh a {
-  display: block;
-  text-decoration: none;
-}
-
-.navbarh-link {
-  padding-right: 20px;
-  padding-top: 30px;
-  color: #fff;
-}
-
 .hero {
   display: flex;
   height: 100vh;
