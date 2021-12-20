@@ -31,14 +31,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="microbase-css/microbase.elements.css" />
-    
+
     <script src="main.js"></script>
     <title>Home Page - Tomasz Dudkowski</title>
   </head>
 
   <body>
     <script>
-      window.onscroll = function () {
+      window.onscroll = () => {
         scrollFunction();
       };
     </script>
@@ -47,11 +47,20 @@
       <nav id="navbarh" class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
           <a href="index.html" class="logo navbar-brand">LOGO</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            id="toggler-button"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a
                   id="navbar-btn"
@@ -328,4 +337,14 @@
       </div>
     </footer>
   </body>
+
+  <script>
+    const collapse_menu = document.getElementById("toggler-button");
+
+    window.onload = () => {
+      collapse_menu.onclick = () => {
+        collapseMenu();
+      };
+    };
+  </script>
 </html>
