@@ -5,7 +5,7 @@
   font-weight: 800;
 }
 
-.navbar {
+#navbarh {
   display: flex;
   list-style-type: none;
   overflow: hidden;
@@ -13,21 +13,19 @@
   width: 100%;
   background-color: rgba(56, 57, 66, 0);
   z-index: 1;
-  height: 6rem;
   padding-bottom: 20px;
-  top: -30px;
 }
 
-.navbar li:first-child {
+.navbarh li:first-child {
   margin-right: auto;
 }
 
-.navbar a {
+.navbarh a {
   display: block;
   text-decoration: none;
 }
 
-.navbar-link {
+.navbarh-link {
   padding-right: 20px;
   padding-top: 30px;
   color: #fff;

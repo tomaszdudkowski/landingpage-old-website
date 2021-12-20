@@ -5,5 +5,5 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {"eslint.nodePath": "sunday-website-project"}
 }
