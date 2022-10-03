@@ -1,9 +1,9 @@
 {
 	"folders": [
 		{
-			"name": "sunday-website-project",
+			"name": "ssangyong-offers-website",
 			"path": "."
 		}
 	],
-	"settings": {"eslint.nodePath": "sunday-website-project"}
+	"settings": {"eslint.nodePath": "ssangyong-offers-website"}
 }
