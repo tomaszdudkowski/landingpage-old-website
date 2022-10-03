@@ -1,9 +1,0 @@
-{
-	"folders": [
-		{
-			"name": "ssangyong-offers-website",
-			"path": "."
-		}
-	],
-	"settings": {"eslint.nodePath": "ssangyong-offers-website"}
-}
